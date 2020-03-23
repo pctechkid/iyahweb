@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="./images/icon.ico">
+	<link rel="stylesheet" type="text/css" href="music.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/jquery-3.3.1.js"></script>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+	<script src="js/lightbox-plus-jquery.min.js"></script>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Aliyah's Website</title>
+    <style>
+        #playlist{
+            list-style: none;
+        }
+        #playlist li a{
+            color:black;
+            text-decoration: none;
+        }
+        #playlist .current-song a{
+            color:blue;
+        }
+		div.scrl {
+		  
+		  width: 150;
+		  height: 200px;
+		  overflow: auto;
+		}
+		/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+		
+		
+    </style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span>A</span>liyah</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="about.html" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="gallery.html" class="nav-link"><span>Gallery</span></a></li>
+			  <li class="nav-item"><a href="faq.html" class="nav-link"><span>FAQs</span></a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
+			  <li class="nav-item"><span>
+			  <div class="nav-link">
+				  <a href="#" onclick="myFunction()" class="dropbtn"><span class="navbar-toggler-icon" id="menuIcon"></a>
+				  <div id="myDropdown" class="dropdown-content">
+				    <a href="music.html">Music</a>
+					<a href="video.html">Videos</a>
+					<a href="anime.html">Anime</a>
+					<a href="vlog.html">Vlogs</a>
+					<a href="friend.html">Friends</a>
+  </div>
+</div>
+			  </span></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  
+     
+	<section class="hero-wrap js-fullheight">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+          <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
+          	<div class="text text-center">
+			
+			<br><span class="subheading">My Playlist</span>
+			<h3>
+								  <span
+								     class="txt-rotate"
+								     data-period="2000"
+								     data-rotate='[ "Play the Moments.", "Hold the Memories.", "Stop the Pain.", "Repeat the Happiness." ]'></span>
+								</h2>
+          		<div align="center"><img src="images/music-player.gif" width="210px"></div>
+				
+	<audio src="" id="audioPlayer" controls autoplay>
+        Sorry, your browser doesn't support html5!
+    </audio>
+	<div>
+	<a href="#" onclick="playlist.prevTrack();"><img src="images/pre.png"></a>
+    <a href="#" onclick="playlist.nextTrack();"><img src="images/nxt.png"></a>
+    <a href="#" onclick="playlist.toggleShuffle(); alert('Shuffle triggered')"><img src="images/shuff.png"></a>
+	</div><br><hr>
+	<div class="scrl">
+    <ul id="playlist">
+		<li><a href="audio/Matthaios - Catriona.mp3">Catriona - Matthaios</a></li>
+        <li><a href="audio/Maroon 5 - Memories.mp3">Memories - Maroon 5</a></li>  
+        <li><a href="audio/Mark Carpio - Kay Tagal.mp3">Kay Tagal - Mark Carpio</a></li>
+        <li><a href="audio/Lauv - Sad Forever.mp3">Sad Forever - Lauv</a></li>
+        <li><a href="audio/Billie Eilish - ocean eyes.mp3">Ocean Eyes - Billie Eilish</a></li>
+		
+		<li><a href="audio/Lewis Capaldi - One.mp3">One - Lewis Capaldi</a></li>
+        <li><a href="audio/Arizona Zervas - ROXANNE.mp3">Roxanne - Arizona Zervas</a></li>
+        <li><a href="audio/Lucas Inside - I Tones and I Dance Monkey.mp3">Tones and I - Dance Monkey</a></li>
+        <li><a href="audio/Ben&Ben - Leaves.mp3">Leaves - Ben&Ben</a></li>
+        <li><a href="audio/Parokya ni Edgar - Your Song (My One and Only You).mp3">Your Song - Parokya ni Edgar</a></li>
+		<li><a href="audio/Hey Joe Show - My Morena Girl.mp3">My Morena Girl - Hey Joe Show</a></li>
+    </ul>
+	</div>
+    
+	
+	
+			</div>
+            </div>
+          </div>
+        </div>
+      
+    </section>
+	
+	
+	
+    
+	<footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p><a href="#">Feel free to explore this page all about me!</a></p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/AlphaomegaCesia"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://facebook.com/beautiful.disaster.me.com.ph"><span class="icon-facebook"></span></a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="about.html"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="gallery.html"><span class="icon-long-arrow-right mr-2"></span>Gallery</a></li>
+                <li><a href="faq.html"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li>
+                <li><a href="contact.html"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+				<li><a href="music.html"><span class="icon-long-arrow-right mr-2"></span>Music</a></li>
+				<li><a href="video.html"><span class="icon-long-arrow-right mr-2"></span>Videos</a></li>
+				<li><a href="anime.html"><span class="icon-long-arrow-right mr-2"></span>Anime</a></li>
+				<li><a href="vlog.html"><span class="icon-long-arrow-right mr-2"></span>Vlogs</a></li>
+				<li><a href="friend.html"><span class="icon-long-arrow-right mr-2"></span>Friends</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Keep in touch!</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Salvador Extension, Labangon, Cebu City</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+639611342548</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">aliyaheliorda.cf</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <p>&emsp;Copyright © <script>document.write(new Date().getFullYear());</script><br>&emsp;Aliyah Eliorda. All rights reserved <i class="icon-heart color-danger"></i></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="js/audioPlayer.js"></script>
+    <script>
+        
+        /*
+    Default constructor configuration:
+        autoplay: true,
+        shuffle: false,
+        loop: false,
+        playerId: "audioPlayer",
+        playlistId: "playlist",
+        currentClass: "current-song"
+        
+        
+*/
+        
+        // loads the audio player
+        var config = {
+          autoplay: true, 
+            loop: true,
+            shuffle: false
+        };
+        var playlist = new AudioPlaylist();
+
+        
+    </script>
+	<script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  
+
+	</script>
+</body>
+</html>

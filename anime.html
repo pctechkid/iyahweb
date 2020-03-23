@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aliyah's Website</title>
+	<link rel="stylesheet" href="css/googlefont.css" type='text/css'>
+	<link rel="icon" href="./images/icon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+	<script src="js/lightbox-plus-jquery.min.js"></script>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+	<style>
+	/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+	
+	</style>
+	<link rel="stylesheet" href="googlefont.css" type='text/css'>
+	   <style>
+
+
+
+.slider {
+  position: relative;
+  display: block;
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.slider__nav-bar {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX( -50% );
+  border-radius: 90px;
+  text-align: center;
+  background: #dde3e6;
+  z-index: 100;
+}
+.slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY( -50% );
+  width: 64px;
+  height: 64px;
+  transition: 0.2s;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0.8;
+}
+.slider__arrow:hover {
+  opacity: 1;
+}
+.slider__arrow_prev {
+  left: 16px;
+  width: 64px;
+  height: 64px;
+  background-image:url(assets/img/arrow__left.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 64px;
+}
+.slider__arrow_next {
+  right: 16px;
+  width: 64px;
+  height: 64px;
+  background-image: url(assets/img/arrow__right.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 64px;
+}
+.nav-control {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.5;
+  width: 32px;
+  height: 32px;
+  transition: 0.2s;
+  cursor: pointer;
+  background-image: url(assets/img/dot-black.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 26px 26px;
+  margin-top: 32px;
+  z-index: 3;
+}
+.nav-control:hover {
+  opacity: 0.8;
+}
+.nav-control_active {
+  opacity: 1;
+}
+.slider-list {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.slider-list::before {
+  content: '';
+  display: block;
+  padding-top: calc(9 / 16 * 100%);
+}
+.slider-list__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16vw;
+  color: #000;
+  will-change: transform;
+  z-index: 1;
+}
+.slider-list__item .back__element {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+}
+.slider-list__item .back__element img {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  top: 50%; left: 50%;
+  transform: translate( -50%, -50% );
+}
+.slider-list__item .main__element {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 3;
+}
+.slider-list__item .main__element img {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  top: 50%; left: 50%;
+  transform: translate( -50%, -50% );
+}
+.slider-list__item .front__element {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 4;
+  /* transform: scale(0); */
+}
+.slider-list__item .front__element img {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  top: 50%; left: 50%;
+  transform: translate( -50%, -50% );
+}
+.slider-list__item .title__element {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 2;
+}
+.slider-list__item .title__element .title {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  top: 50%; left: 50%;
+  transform: rotate(-15deg) translate( -45%, -125% );
+  font-family: 'Molle', cursive;
+  color: #eef2f3;
+  text-align: center;
+}
+.slider-list__item .more__element {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 10;
+}
+.slider-list__item .more__element .content {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 768px;
+  height: auto;
+  margin: 64px auto;
+  padding: 0 32px;
+  color: #2e3131;
+  text-align: left;
+}
+.slider-list__item .more__element .content .headline {
+  position: relative;
+  display: block;
+  max-width: 240px;
+  font-family: 'Molle', cursive;
+  font-size: 38px;
+  line-height: 46px;
+}
+.slider-list__item .more__element .content .excerpt {
+  position: relative;
+  display: block;
+  max-width: 240px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 0 16px;
+}
+.slider-list__item .more__element .content .link {
+  position: relative;
+  display: block;
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: 180px;
+  height: 48px;
+  border-radius: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.06);
+  transition: all 0.4s ease;
+}
+.slider-list__item .more__element .content .link .fill {
+  position: absolute;
+	background-image: linear-gradient(to right, #d43325, #f36e67);
+	background-size: 150% 150%;
+	height: 48px;
+	width: 180px;
+	border-radius: 24px;
+	margin: 0;
+	z-index: -1;
+  transition: all 0.4s ease;
+  -webkit-animation: gradient 3s ease infinite;
+	-moz-animation: gradient 3s ease infinite;
+	animation: gradient 3s ease infinite;
+}
+.slider-list__item .more__element .content .link .fill.fill-dark {
+  background-image: linear-gradient(to right, #252228, #848f9e);
+} 
+.slider-list__item .more__element .content .link a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #dde3e6;
+  font-weight: 700;
+  text-align: center;
+  line-height: 48px;
+  text-decoration: none;
+  outline: 0px none;
+  outline: 0px;
+  z-index: 2;
+}
+.slider-list__item .more__element .content .link:hover {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.05), 0 15px 12px rgba(0,0,0,0.06);
+}
+.slider-list__item_active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  z-index: 2;
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .slider-list__item .title__element .title {
+    font-size: 26vw;
+  }
+
+  .slider-list__item .more__element .content .excerpt {
+    display: none;
+  }
+
+  .slider-list__item .more__element .content .link {
+    margin-top: 16px;
+  }
+
+}
+
+@media screen and (max-width: 560px) {
+
+  .slider__nav-bar {
+    /* hide dots for mobile */
+    opacity: 0;
+    z-index: -1;
+  }
+
+}
+ 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+      
+      </style>
+   
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-124048250-1');
+    </script>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span>A</span>liyah</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="about.html" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="gallery.html" class="nav-link"><span>Gallery</span></a></li>
+			  <li class="nav-item"><a href="faq.html" class="nav-link"><span>FAQs</span></a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
+			  <li class="nav-item"><span>
+			  <div class="nav-link">
+				  <a href="#" onclick="myFunction()" class="dropbtn"><span class="navbar-toggler-icon" id="menuIcon"></a>
+				  <div id="myDropdown" class="dropdown-content">
+					<a href="music.html">Music</a>
+					<a href="video.html">Videos</a>
+					<a href="anime.html">Anime</a>
+					<a href="vlog.html">Vlogs</a>
+					<a href="friend.html">Friends</a>
+  </div>
+</div>
+			  </span></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <br><br>
+	 <section class="page-wrapper" >
+
+      <div class="slider">
+        
+        <ul class="slider-list">
+          
+          <li class="slider-list__item  ">
+            <span class="back__element">
+              <img src="assets/img/back_strawberry_003.png" />
+            </span>
+            <span class="main__element">
+              <img src="assets/img/a1.jpg" />
+            </span>
+            <span class="front__element">
+              <img src="assets/img/front_strawberry_003.png" />
+            </span>
+            
+            <span class="more__element">
+              <span class="content">
+                <span class="headline">Sinbad</span>
+                <span class="excerpt">Magi: Adventure of Sinbad follows the origins of Sinbad, who years later would be the King of Sindria.</span>
+                
+              </span>
+            </span>
+           </li>
+
+          <li class="slider-list__item">
+			<span class="back__element">
+              <img src="assets/img/back_apple_002.png" />
+            </span>
+            <span class="main__element">
+              <img src="assets/img/a2.jpg" />
+            </span>
+			<span class="front__element">
+              <img src="assets/img/front_apple_002.png" />
+            </span>
+           
+            <span class="more__element">
+              <span class="content">
+                <span class="headline">No Game No Life</span>
+                <span class="excerpt">Sora and Shiro are two hikikomori step-siblings who are known in the online gaming world as Blank, an undefeated group of gamers. One day, they are challenged to a game of chess by Tet, a god from another reality.</span>
+                
+              </span>
+            </span>
+           </li>
+
+           <li class="slider-list__item">
+           <span class="back__element">
+              <img src="assets/img/back_strawberry_003.png" />
+            </span>
+            <span class="main__element">
+              <img src="assets/img/a3.jpg" />
+            </span>
+            <span class="front__element">
+              <img src="assets/img/front_strawberry_003.png" />
+            </span>
+           
+            <span class="more__element">
+              <span class="content">
+                <span class="headline">K-On!</span>
+                <span class="excerpt">In an unspecified part of Japan, four high school girls join the light music club of the all-girls private Sakuragaoka High School to try to save it from being disbanded. However, they are the only members of the club.</span>
+                
+              </span>
+            </span>
+           </li>
+		   <li class="slider-list__item">
+           <span class="back__element">
+              <img src="assets/img/back_apple_002.png" />
+            </span>
+            <span class="main__element">
+              <img src="assets/img/a4.jpg" />
+            </span>
+            <span class="front__element">
+              <img src="assets/img/front_apple_002.png" />
+            </span>
+           
+            <span class="more__element">
+              <span class="content">
+                <span class="headline">One Piece</span>
+                <span class="excerpt">The series focuses on Monkey D. Luffy, a young man who, inspired by his childhood idol and powerful pirate "Red Haired" Shanks, sets off on a journey from the East Blue Sea to find the famed treasure One Piece and proclaim himself the King of the Pirates.</span>
+                
+              </span>
+            </span>
+           </li>
+		   <li class="slider-list__item">
+           <span class="back__element">
+              <img src="assets/img/back_strawberry_003.png" />
+            </span>
+            <span class="main__element">
+              <img src="assets/img/a5.jpg" />
+            </span>
+            <span class="front__element">
+              <img src="assets/img/front_strawberry_003.png" />
+            </span>
+            <span class="more__element">
+              <span class="content">
+                <span class="headline">Shokugeki no Soma</span>
+                <span class="excerpt">The series is set mainly at Totsuki Saryo Culinary Institute, an elite culinary school located in Tokyo, Japan, which only a handful of students graduate from each year.</span>
+                
+              </span>
+            </span>
+           </li>
+		   <li class="slider-list__item">
+           <span class="back__element">
+              <img src="assets/img/back_apple_002.png" />
+            </span>
+            <span class="main__element">
+              <img src="assets/img/a6.jpg" />
+            </span>
+            <span class="front__element">
+              <img src="assets/img/front_apple_002.png" />
+            </span>
+            <span class="more__element">
+              <span class="content">
+                <span class="headline">Your Name</span>
+                <span class="excerpt">Mitsuha Miyamizu is a high school girl living in the town of Itomori in Japan's mountainous Hida region. She is bored with country life and wishes to be a handsome boy in her next life.</span>
+                
+              </span>
+            </span>
+           </li>
+		   <li class="slider-list__item">
+           <span class="back__element">
+              <img src="assets/img/back_strawberry_003.png" />
+            </span>
+            <span class="main__element">
+              <img src="assets/img/a7.jpg" />
+            </span>
+            <span class="front__element">
+              <img src="assets/img/front_strawberry_003.png" />
+            </span>
+            <span class="more__element">
+              <span class="content">
+                <span class="headline">Guilty Crown</span>
+                <span class="excerpt">High school student Shu Ouma encounters a wounded girl named Inori Yuzuriha, the vocalist of a popular internet group Egoist, taking refuge at his film club's workshop.</span>
+                
+              </span>
+            </span>
+           </li>
+           
+        </ul>
+        
+        <div class="slider__nav-bar">
+          <a class="nav-control"></a>
+          <a class="nav-control"></a>
+          <a class="nav-control"></a>
+		  <a class="nav-control"></a>
+		  <a class="nav-control"></a>
+		  <a class="nav-control"></a>
+		  <a class="nav-control"></a>
+        </div>
+        
+        <div class="slider__controls">
+          <a class="slider__arrow slider__arrow_prev"></a>
+          <a class="slider__arrow slider__arrow_next"></a>
+        </div>
+
+      </div>      
+
+    </section>
+	  
+	  
+	  
+	  
+	  
+	  
+	  <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p><a href="#">Feel free to explore this page all about me!</a></p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/AlphaomegaCesia"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://facebook.com/beautiful.disaster.me.com.ph"><span class="icon-facebook"></span></a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="about.html"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="gallery.html"><span class="icon-long-arrow-right mr-2"></span>Gallery</a></li>
+                <li><a href="faq.html"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li>
+                <li><a href="contact.html"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+				<li><a href="music.html"><span class="icon-long-arrow-right mr-2"></span>Music</a></li>
+				<li><a href="video.html"><span class="icon-long-arrow-right mr-2"></span>Videos</a></li>
+				<li><a href="anime.html"><span class="icon-long-arrow-right mr-2"></span>Anime</a></li>
+				<li><a href="vlog.html"><span class="icon-long-arrow-right mr-2"></span>Vlogs</a></li>
+				<li><a href="friend.html"><span class="icon-long-arrow-right mr-2"></span>Friends</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Keep in touch!</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Salvador Extension, Labangon, Cebu City</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+639611342548</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">aliyaheliorda.cf</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <p>&emsp;Copyright © <script>document.write(new Date().getFullYear());</script><br>&emsp;Aliyah Eliorda. All rights reserved <i class="icon-heart color-danger"></i></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  
+  </script>
+  <script src="js/main.js"></script>
+  <script src="assets/js/aw.js"></script>
+    
+    <script src="assets/js/demo.js"></script>
+    
+  </body>
+</html>
