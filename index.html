@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	
 	<style>
 	/* Dropdown Button */
 .dropbtn {
@@ -71,12 +72,18 @@
 .show {display:block;}
 	
 	</style>
+<script type="text/javascript">
+$(function(){
+    window.location.href = $('.autoClick').attr('href');
+	window.alert('Welcome!');
+});
+</script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  <audio autoplay>
+			<source src="audio/Ben&Ben - Leaves.mp3" type="audio/mpeg">
+	  </audio>
   
-  <audio autoplay>
-	<source src="audio/Ben&Ben - Leaves.mp3" type="audio/mp3">
-  </audio>
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -109,9 +116,6 @@
 	      </div>
 	    </div>
 	  </nav>
-
-
-
 	  
 	  
 	  <section class="hero-wrap js-fullheight">
@@ -128,6 +132,7 @@
 								     data-period="2000"
 								     data-rotate='[ "a Student.", "an Artist.", "an Adventurer.", "an Aspiring Singer.", "your Friend." ]'></span>
 								</h2>
+								
 							</div>
             </div>
           </div>
@@ -155,7 +160,7 @@
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
-                <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="home.html" class="autoClick"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
                 <li><a href="about.html"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
                 <li><a href="gallery.html"><span class="icon-long-arrow-right mr-2"></span>Gallery</a></li>
                 <li><a href="faq.html"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li>
